@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+
+    <title>QUIZ</title>
+</head>
+
+<body>
+    <main class="main">
+        <header class="logo">
+            <h1 class="logo__header">
+                <span class="logo__youcode logo__youcode--specialOpposite logo__youcode--moveRight ">&gt;</span>
+                <span class="logo__youcode logo__youcode--specialOpposite">&sol;</span>
+                <span class="logo__youcode logo__youcode--special">&sol;</span>
+                <span class="logo__youcode logo__youcode--special logo__youcode--moveLeft">&gt;</span> You<span
+                    class="logo__youcode">code</span>
+                Quiz
+            </h1>
+        </header>
+        <div class="score">
+            <div>RIGHT:</div>
+            <div class="js-right">0</div>
+            <div class="score__wrong">WRONG: </div>
+            <div class=" score__wrong  js-wrong">0</div>
+        </div>
+        <form class="form" action="https://postman-echo.com/get" method="POST"
+            enctype="application/x-www-form-urlencoded">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Pytanie <span class="js-questionNumber"></span></legend>
+                <div class="form__fieldset js-questionContent">Question</div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Odpowiedzi</legend>
+                <label class="form__label">
+                    <input class="form__inputRadio  js-radio-1" type="radio" name="answer" required value="A">
+                    <span class="form__radioSpan js-radioSpan-1">ODP 1</span>
+                </label>
+                <label class="form__label">
+                    <input class="form__inputRadio  js-radio-2 " type="radio" name="answer" required value="B">
+                    <span class="form__radioSpan  js-radioSpan-2">ODP 2</span>
+                </label>
+                <label class="form__label">
+                    <input class="form__inputRadio  js-radio-3" type="radio" name="answer" required value="C">
+                    <span class="form__radioSpan js-radioSpan-3">ODP 3</span>
+                </label>
+                <label class="form__label ">
+                    <input class="form__inputRadio  js-radio-4" type="radio" name="answer" required value="D">
+                    <span class="form__radioSpan js-radioSpan-4">ODP 4</span>
+                </label>
+            </fieldset>
+            <button type="submit" class="button  js-buttonCheck"><span class="button__span">Sprawdź
+                    odpowiedź</span></button>
+            <button type="reset" class="button button--hide js-buttonNext"><span class="button__span">Następne
+                    pytanie</span></button>
+        
+        </form>
+        <div class="result js-results"></div>
+        <button type="reset" class="button button--hide js-buttonPlayAgain"><span class="button__span">Jeszcze
+            raz?</span></button>
+    </main>
+</body>
+
+</html>
